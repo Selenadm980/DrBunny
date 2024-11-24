@@ -1,0 +1,359 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #000;
+}
+
+.card {
+    border: none;
+}
+
+/* Estilos para las tarjetas personalizadas */
+.custom-card {
+    background-color: #ffffff; /* Fondo blanco para las tarjetas */
+    color: #333; /* Color de texto oscuro */
+    border: none; /* Sin borde */
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    margin-bottom: 20px; /* Separación entre tarjetas */
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+.custom-card .card-header {
+    background-color: #f8f9fa;
+    border-bottom: none;
+}
+
+/* Estilo del título de las tarjetas */
+.custom-card .card-header h2 {
+    color: #AF5496;
+}
+
+.custom-card .card-body {
+    padding: 1rem;
+}
+
+/* Estilos específicos para la tarjeta del consejo */
+.custom-card .card-body #adviceText {
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Contenedor para ajustar el tamaño de los gráficos */
+.chart-container {
+    position: relative;
+    height: 300px; /* Puedes ajustar la altura según tus necesidades */
+}
+
+/* Estilos para la sección de calorías */
+.calories-info p {
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Estilos para el texto dentro de la tarjeta de consejo */
+#adviceText {
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Ajustes para dispositivos móviles */
+@media (max-width: 767px) {
+    .chart-container {
+        height: 250px;
+    }
+
+    .card-body.d-flex.align-items-center {
+        flex-wrap: wrap;
+    }
+
+    .chart-container,
+    .calories-info {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .calories-info {
+        margin-top: 20px;
+    }
+}
+
+.mover {
+    margin-left: 250px; /* Ajusta este valor según el desplazamiento deseado */
+}
+
+.btn-credits {
+    background-color: #AF5496;
+    color: white;
+}
+
+.btn-credits:hover {
+    background-color: #f4a9c7; /* Un rosa más pálido para el hover */
+}
+
+body {
+    padding-top: 80px; /* Ajusta este valor si cambias la altura del navbar */
+    background-color: white;
+}
+
+/* División en dos columnas */
+.content-container {
+    display: flex;
+    height: 100vh;
+    background-color: #fcfcfc;
+}
+
+.left-section,
+.right-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.left-section img {
+    max-width: 100%;
+    height: auto;
+}
+
+.right-section {
+    padding: 20px;
+}
+
+/* Estilo para la imagen del perfil */
+.profile-img {
+    max-width: 80%;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 1rem;
+}
+
+/* Información del perfil */
+.profile-info h2 {
+    color: #AF5496;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.profile-info p {
+    font-size: 1rem;
+    color: #555555;
+}
+
+/* Estilos para las categorías de actividades */
+.activity-category h3 {
+    color: #AF5496;
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+}
+
+.activity-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.activity-option {
+    flex: 1 1 45%;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 8px;
+    background-color: #f4a9c7;
+    color: #ffffff;
+    transition: transform 0.2s ease-in-out;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.activity-option:hover {
+    background-color: #AF5496;
+    transform: scale(1.05);
+}
+
+/* Rastreador de estado de ánimo */
+.mood-tracker select {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 8px;
+    border: 1px solid #e6e6e6;
+    color: #333;
+    background-color: #ffffff;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Ajustes para dispositivos móviles */
+@media (max-width: 768px) {
+    .content-container {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .left-section,
+    .right-section {
+        width: 100%;
+        text-align: center;
+        padding: 1rem 0;
+    }
+
+    .activity-option {
+        flex: 1 1 100%;
+    }
+}
+
+.activity-options,
+.mood-options {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.activity-btn,
+.mood-btn {
+    font-size: 24px;
+    padding: 10px;
+    border: none;
+    border-radius: 50%;
+    background-color: #f4a9c7;
+    color: #ffffff;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.activity-btn:hover,
+.mood-btn:hover {
+    background-color: #AF5496;
+    transform: scale(1.1);
+}
+
+/* Efecto de selección */
+.activity-btn.active,
+.mood-btn.active {
+    background-color: #AF5496;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+/* Eliminar márgenes y rellenos de cualquier elemento que pueda desbordar */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.btn-register {
+    background-color: #AF5496;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn-register:hover {
+    background-color: #f4a9c7; /* Un rosa más pálido para el hover */
+}
+
+.credit-link {
+    color: #f8cce6; /* Color personalizado */
+    text-decoration: none; /* Eliminar subrayado */
+}
+
+.credit-link:hover {
+    color: #f4a9c7; /* Un color más oscuro para el hover */
+    text-decoration: underline; /* Añadir subrayado al pasar el ratón */
+}
+
+/* Footer Background */
+.bg-pink {
+    background-color: #AF5496; /* Rosado principal */
+    color: white;
+}
+
+/* Footer styling */
+.footer {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.footer h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.footer h5 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.footer p {
+    margin: 0.2rem 0;
+}
+
+.footer .ascii-art {
+    font-size: 1rem;
+    margin-top: 1rem;
+    line-height: 1;
+}
+
+/* Ajustes para dispositivos móviles en el footer */
+@media (max-width: 768px) {
+    .footer .col-md-6,
+    .footer .col-md-4 {
+        margin-bottom: 1rem;
+    }
+}
+
+.container-fluid {
+    height: 100%;
+    width: 100%;
+}
+
+/* Aseguramos que la sección de fondo ocupe toda la pantalla */
+.gradient-custom {
+    height: 100%; /* Esto hace que el fondo se estire completamente */
+    width: 100%;
+    background-color: #f8cce6;
+    background-image: url("../img/1x/Mesa de trabajo 8DrBunny.png");
+    background-repeat: repeat;
+    background-size: 10%; /* Cambiar a "auto" para evitar la distorsión de la imagen */
+}
+
+.btn-outline-dark {
+    color: #333;
+    border-color: #333;
+}
+
+.btn-outline-dark:hover {
+    background-color: #f8cce6; /* Color hover */
+    color: #fff;
+}
+
+/* Estilos para el mapa */
+#map {
+    height: 500px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+/* Estilos para el mensaje de error */
+#error-message {
+    color: red;
+    display: none;
+}
+
+/* Ajustes para dispositivos móviles */
+@media (max-width: 767px) {
+    #map {
+        height: 300px;
+    }
+}
